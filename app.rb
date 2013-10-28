@@ -1,4 +1,6 @@
 require 'sinatra'
+require 'active_record'
+require_relative  #fill in 'model'
 
 get '/' do  
   "<h1>I love stuffed animals.</h1>"
