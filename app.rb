@@ -1,7 +1,7 @@
 require 'sinatra'
 
 get '/' do  
-  "<h1>Boo the dog</h1>"
+  "<h1>I love stuffed animals.</h1>"
 end 
 
 get '/about_boo' do  
