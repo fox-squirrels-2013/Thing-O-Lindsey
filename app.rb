@@ -8,10 +8,20 @@ ActiveRecord::Base.establish_connection(adapter: 'postgresql',
 # require_relative  #fill in 'model'
 
 get '/' do  
-  "<h1>I love stuffed animals.</h1>"
+  erb :index
 end 
 
-get '/about_boo' do  
-  'Boo the dog is known as "The world\'s cutest dog".'  
+post '/' do  
+  puts params
+  User.create(:name => params[:name])
+  redirect '/'
 end 
+
+# get '/login' do  
+#   erb :login
+# end 
+
+# post '/layout' do  
+#   "You input '#{params[:message]}.'"
+# end 
 
