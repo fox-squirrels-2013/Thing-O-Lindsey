@@ -2,8 +2,8 @@ require 'sinatra'
 require 'active_record'
 require_relative './app/models/users'
 
-ActiveRecord::Base.establish_connection(adapter: 'postgresql')
-										# database: 'users')
+ActiveRecord::Base.establish_connection(adapter: 'postgresql',
+									database: 'users')
 
 # require_relative  #fill in 'model'
 
