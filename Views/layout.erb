@@ -1,10 +1,15 @@
 
-<h1>Hello! Please enter your name.</h1>
+<h1 style="color:white">Hello! Enter your name if you love Boo!</h1>
 <body background="http://i1320.photobucket.com/albums/u522/Hi_C_30/Boo-the-dog-Hungry_zps13667dd3.jpg">
-
-
 
 <form action="/" method="post">
   <input type="text" name="name">
   <input type="submit" value="save">
 </form>
+
+<h2 style="color:white">These people love Boo...</h2>
+
+
+<% @all_users.each do |user| %>  
+  <%="#{user.name} "%>
+<% end %>

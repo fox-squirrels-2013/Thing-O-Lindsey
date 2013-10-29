@@ -8,14 +8,22 @@ ActiveRecord::Base.establish_connection(adapter: 'postgresql',
 # require_relative  #fill in 'model'
 
 get '/' do  
+	@all_users = User.all :order => :id  
   erb :index
 end 
 
+#add name
 post '/' do  
-  puts params
+  # puts params
   User.create(:name => params[:name])
   redirect '/'
 end 
+
+# post '/' do  
+#   puts params
+#   User.create(:name => params[:name])
+#   redirect '/'
+# end 
 
 # get '/login' do  
 #   erb :login

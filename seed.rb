@@ -6,5 +6,5 @@ ActiveRecord::Base.establish_connection(adapter: 'postgresql',
 									database: 'users')
 
 20.times do
-	User.create(:name => Faker::Lorem.word)
+	User.create(:name => Faker::Name.first_name)
 end
